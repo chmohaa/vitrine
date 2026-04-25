@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certification Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="brand-row">
+        <div class="brand-dot" aria-hidden="true"></div>
+        <p class="brand-name">Certification Showcase</p>
+      </div>
+      <h1>Витрина ваших IT-сертификатов</h1>
+      <p class="subtitle">
+        Загрузите PNG-бейдж, добавьте данные и скачайте аккуратный PDF-сертификат для портфолио.
+      </p>
+      <a class="cta" href="#builder">Добавить файл</a>
+    </header>
+
+    <main>
+      <section id="builder" class="builder-card">
+        <h2>Конструктор сертификата</h2>
+        <form id="certificateForm">
+          <label>
+            Имя владельца
+            <input id="studentName" type="text" placeholder="Например, Ivan Petrov" required />
+          </label>
+
+          <label>
+            Название сертификации
+            <input id="certName" type="text" placeholder="Например, Advanced Network Professional" required />
+          </label>
+
+          <label>
+            Дата получения
+            <input id="issueDate" type="date" required />
+          </label>
+
+          <label>
+            PNG-бейдж
+            <input id="badgeInput" type="file" accept="image/png" required />
+          </label>
+
+          <button type="submit">Скачать PDF</button>
+        </form>
+
+        <p class="note">
+          Важно: это независимый демо-портал и он не копирует официальные сайты или брендинг третьих сторон.
+        </p>
+      </section>
+
+      <section class="preview-card">
+        <h2>Предпросмотр</h2>
+        <div id="preview" class="preview">
+          <img id="previewImage" alt="Предпросмотр PNG" hidden />
+          <p id="previewPlaceholder">Загрузите PNG-файл, чтобы увидеть бейдж.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
